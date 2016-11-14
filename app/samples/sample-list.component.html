@@ -30,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>                        
-                    <tr *ngFor='let sample of samples'>                        
+                    <tr *ngFor='let sample of samples | sampleFilterByUser:listFilter'>                        
                         <td>{{ sample.Barcode}}</td>
                         <td>{{ sample.Status }}</td>
                         <td>{{ sample.CreatedAt }}</td>

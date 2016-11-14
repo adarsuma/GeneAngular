@@ -6,7 +6,6 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-
 import { ISample } from './sample';
 
 @Injectable()
@@ -17,7 +16,7 @@ export class SampleService {
 
     getSamples(): Observable<ISample[]> {
         return this._http.get(this._sampleUrl)            
-            .map((response: Response) => response.json())
+            .map((response: Response) => <ISample[]>response.json())
             .do(data => console.log('All: ' +  JSON.stringify(data)))
             .catch(this.handleError);
     }   

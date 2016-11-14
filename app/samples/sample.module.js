@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var sample_list_component_1 = require('./sample-list.component');
 var sample_service_1 = require('./sample.service');
+var sample_filter_pipe_1 = require('./sample-filter.pipe');
 var shared_module_1 = require('../shared/shared.module');
 var SampleModule = (function () {
     function SampleModule() {
@@ -25,7 +26,8 @@ var SampleModule = (function () {
                 ])
             ],
             declarations: [
-                sample_list_component_1.SampleListComponent
+                sample_list_component_1.SampleListComponent,
+                sample_filter_pipe_1.SampleFilterByUserPipe
             ],
             providers: [
                 sample_service_1.SampleService

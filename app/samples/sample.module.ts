@@ -3,6 +3,7 @@ import { RouterModule} from '@angular/router';
 
 import { SampleListComponent } from './sample-list.component';
 import { SampleService } from './sample.service';
+import { SampleFilterByUserPipe } from './sample-filter.pipe';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -14,7 +15,8 @@ import { SharedModule } from '../shared/shared.module';
     ])
   ],
   declarations: [
-    SampleListComponent
+    SampleListComponent,
+    SampleFilterByUserPipe
   ],
   providers: [
     SampleService
