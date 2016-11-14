@@ -15,10 +15,10 @@ require('rxjs/add/operator/do');
 require('rxjs/add/operator/catch');
 require('rxjs/add/operator/map');
 var SampleService = (function () {
+    //private _sampleUrl = 'api/samples/samples.json';
     function SampleService(_http) {
         this._http = _http;
-        //private _sampleUrl = 'http://localhost:50264/api/Gene/GetAllSamples';
-        this._sampleUrl = 'api/samples/samples.json';
+        this._sampleUrl = 'http://localhost:50264/api/Gene/GetAllSamples';
     }
     SampleService.prototype.getSamples = function () {
         return this._http.get(this._sampleUrl)
